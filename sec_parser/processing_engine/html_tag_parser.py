@@ -55,5 +55,3 @@ class HtmlTagParser(AbstractHtmlTagParser):
             root = root.html
             root = root.body if root.body else root
         return root
-# Just in case
-# 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
