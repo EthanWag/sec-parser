@@ -123,7 +123,7 @@ class CompositeSemanticElement(AbstractSemanticElement):
                 flattened_elements.append(e)
             flattened_elements.extend(
                 cls.unwrap_elements(
-                    e.inner_elements,
+                    e.inner_elements, # For some reason, some of the inner elements are broken up weird here
                     include_containers=include_containers,
                 ),
             )

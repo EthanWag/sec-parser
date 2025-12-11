@@ -156,7 +156,7 @@ class AbstractSemanticElementParser(ABC):
         if not include_irrelevant_elements:
             elements = [
                 e for e in elements if isinstance(e, IrrelevantElement) is False
-            ]
+            ]     
         if unwrap_elements is False:
             return elements
         return CompositeSemanticElement.unwrap_elements(

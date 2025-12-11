@@ -176,9 +176,8 @@ class HtmlTag:
     def get_children(self) -> list[HtmlTag]:
         if self._children is None:
             self._children = [
-                HtmlTag(child)
-                for child in self._bs4.children
-                if not (isinstance(child, bs4.NavigableString) and child.strip() == "")
+                HtmlTag(child)                for child in self._bs4.children
+                if not (isinstance(child, bs4.NavigableString))
             ]
         return self._children
 

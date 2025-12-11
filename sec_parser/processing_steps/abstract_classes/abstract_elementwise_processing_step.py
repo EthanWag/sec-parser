@@ -78,6 +78,7 @@ class AbstractElementwiseProcessingStep(AbstractProcessingStep):
                 if self._types_to_process and not any(
                     isinstance(element, t) for t in self._types_to_process
                 ):
+                    
                     continue
                 if any(isinstance(element, t) for t in self._types_to_exclude):
                     continue
